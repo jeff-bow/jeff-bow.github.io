@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Elements Reference - Massively by HTML5 UP</title>
+		<title>Jeff Bowers - Contact Me</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -41,20 +41,13 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post 
-							<section class="post">
-								<header class="major">
-									<h1>Elements<br />
-									Reference</h1>
-								</header>
-
-								<!-- Text stuff 
-									<h2>Text</h2>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
-									Finally, this is a <a href="#">link</a>.</p>
-									<hr />
+						<!-- Post -->
+						<header class="major">
+							<span class="date"></span>
+							<h1>Contact Me</h1>
+							<p>Feel free to reach out to me if you would like to talk more about my portfolio!</p>
+						</header>
+									<!--<hr />
 									<h2>Heading Level 2</h2>
 									<h3>Heading Level 3</h3>
 									<h4>Heading Level 4</h4>
@@ -455,22 +448,21 @@ print 'It took ' + i + ' iterations to sort the deck.';
 						</section> -->
 						<section class="split contact">
 							<section class="alt">
-								<h3>Address</h3>
-								<p>Malahide - County Dublin,<br />
-								Ireland</p>
+							<section>
+								<h3>Email</h3>
+									<p>bowersjeff0211@gmail.com</p>
 							</section>
 							<section>
 								<h3>Phone</h3>
 								<p>+353 (087) 134 4656</p>
 							</section>
-							<section>
-								<h3>Email</h3>
-								<p>bowersjeff0211@gmail.com</p>
+							<h3>Address</h3>
+							<p>Malahide - County Dublin,<br />
+								Ireland</p>
 							</section>
-							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://twitter.com/jbow000" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="https://www.linkedin.com/in/jeff-bowers-b88bb9206" class="icon brands fa-linkedin"><span class="label">LiknedIn</span></a></li>
 
 								</ul>
@@ -560,6 +552,20 @@ print 'It took ' + i + ' iterations to sort the deck.';
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				document.addEventListener('DOMContentLoaded', (event) => {
+					// Creating a new Date object for the current date
+					const today = new Date();
+				
+					// Formatting the date as "Month day (numeric), Year"
+					const options = { month: 'long', day: 'numeric', year: 'numeric' };
+					const dateString = today.toLocaleDateString('en-US', options);
+				
+					// Finding the first element with the class "date" and setting its text to the formatted date string
+					document.querySelector('.date').textContent = dateString;
+				});
+				</script>
 
 	</body>
 </html>
